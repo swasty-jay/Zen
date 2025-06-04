@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative overflow-hidden h-81 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 rounded-bl-[100px]">
+    <div className="relative overflow-hidden h-full bg-gradient-to-br from-primary-100 via-primary-200 to-blue-600 rounded-bl-[100px]">
       {/* Background decorative elements */}
       <NavBar />
       <div className="absolute inset-0 opacity-10">
@@ -108,7 +108,7 @@ const HeroSection: React.FC = () => {
               <img
                 src="/hero-image.png"
                 alt="Business card interface mockup"
-                className="w-full h-auto max-w-lg mx-auto mt-10 drop-shadow-2xl"
+                className="w-full h-auto max-w-xl mx-auto mt-10 drop-shadow-2xl"
               />
             </motion.div>
           </motion.div>
