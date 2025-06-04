@@ -5,15 +5,17 @@ import NavBar from "./NavBar";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative overflow-hidden h-full bg-gradient-to-br from-primary-100 via-primary-200 to-blue-600 rounded-bl-[100px]">
-      {/* Background decorative elements */}
+    // Hero container with background gradient and slight corner rounding
+    <div className="relative overflow-hidden min-h-[80vh] bg-gradient-to-br from-primary-100 via-primary-200 to-blue-600 rounded-bl-[100px]">
+      {/* Decorative background shapes */}
       <NavBar />
       <div className="absolute inset-0 opacity-10">
         <div className="absolute bg-white rounded-full top-20 left-20 w-72 h-72 blur-3xl"></div>
-        <div className="absolute rounded-full bottom-20 right-20 w-96 h-96 bg-cyan-300 blur-3xl"></div>
+        <div className="absolute rounded-full bottom-20 right-20 w-60 h-60 bg-cyan-300 blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 flex items-center min-h-screen px-6 py-8 mx-auto">
+      {/* Main content section */}
+      <div className="container relative z-10 flex items-center min-h-[80vh] px-6 py-8 mx-auto">
         <div className="grid items-center w-full gap-16 lg:grid-cols-2">
           {/* Left Content */}
           <motion.div
@@ -32,6 +34,7 @@ const HeroSection: React.FC = () => {
               <span className="relative">virtual cards</span> for your{" "}
               <span className="relative">
                 business
+                {/* Elliptical highlight */}
                 <motion.svg
                   initial={{ pathLength: 0, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 1 }}
@@ -70,6 +73,7 @@ const HeroSection: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col gap-2 sm:flex-row"
             >
+              {/* Main CTA button */}
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -82,6 +86,7 @@ const HeroSection: React.FC = () => {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </motion.button>
 
+              {/* Secondary CTA */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
@@ -92,23 +97,23 @@ const HeroSection: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Card Interface Mockup */}
+          {/* Right Image - with negative margin to overlap next section */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative z-10"
+            className="relative z-[60] -mb-64" // <-- Drop image below hero
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="relative"
+              className="relative "
             >
               <img
                 src="/hero-image.png"
                 alt="Business card interface mockup"
-                className="w-full h-auto max-w-xl mx-auto mt-10 drop-shadow-2xl"
+                className="w-full h-auto max-w-xl mx-auto drop-shadow-2xl"
               />
             </motion.div>
           </motion.div>
