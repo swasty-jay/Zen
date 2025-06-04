@@ -27,7 +27,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, delay }) => {
       // Animation when user hovers over the card
       whileHover={{ y: -5, transition: { duration: 0.2 } }} // Lift card up slightly
       // Tailwind classes for styling the card container
-      className="p-8 transition-shadow duration-300 border border-gray-100 shadow-sm rounded-2xl hover:shadow-lg"
+      className="relative z-0 p-8 transition-shadow duration-300 border border-gray-100 shadow-sm rounded-2xl hover:shadow-lg"
     >
       {/* Container for the icon with its own animation */}
       <motion.div
@@ -75,7 +75,7 @@ const CustomCardsPage: React.FC = () => {
     {
       // First card icon - layered design with purple and blue backgrounds
       icon: (
-        <div className="relative">
+        <div className="relative z-0">
           {" "}
           {/* Relative positioning allows us to stack elements */}
           {/* Main icon container */}

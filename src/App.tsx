@@ -1,12 +1,11 @@
-import CustomCardsPage from "./components/CustomCardsPage";
+// import CustomCardsPage from "./components/CustomCardsPage";
 import HeroSection from "./components/HeroSection";
-// import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
-    <div>
+    <div className="z-0 min-h-screen bg-gray-100">
       <HeroSection />
-      <CustomCardsPage />
+      {/* <CustomCardsPage /> */}
     </div>
   );
 };
