@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import NavBar from "./NavBar";
 import CustomCardsPage from "./CustomCardsPage";
+import { Button } from "./Button";
 
 const HeroSection: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const HeroSection: React.FC = () => {
 
         {/* Main content section */}
         <div className="container relative z-10 flex items-center min-h-[80vh] px-6 py-8 mx-auto">
-          <div className="grid items-center w-full gap-16 lg:grid-cols-2">
+          <div className="grid items-center w-full gap-16 lg:grid-cols-2 rounded-bl-[1000px]">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -75,21 +75,11 @@ const HeroSection: React.FC = () => {
                 className="flex flex-col gap-2 sm:flex-row"
               >
                 {/* Main CTA button */}
-                <motion.button
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                  className="flex items-center gap-3 px-4 py-2 font-semibold text-white transition-all duration-300 rounded-full shadow-2xl bg-gradient-to-r from-gray-800 to-gray-900 hover:shadow-3xl group"
-                >
-                  Get your card
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </motion.button>
+                <Button>Get started</Button>
 
                 {/* Secondary CTA */}
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-4 py-2 font-semibold text-white transition-all duration-300 border rounded-full bg-white/20 backdrop-blur-sm border-white/30 hover:bg-white/30"
                 >
